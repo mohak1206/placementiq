@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar';
 const Dashboard = () => {
   return (
     <div className="min-h-screen bg-background flex">
-      <Sidebar activePage="Dashboard" />
+      <Sidebar activePage="dashboard" />
       
       <main className="flex-1 md:ml-64">
         {/* Header */}
@@ -149,24 +149,27 @@ const Dashboard = () => {
 
             {/* Top Skills Gap - Span 4 */}
             <div className="lg:col-span-4 glass-card rounded-2xl p-6">
-              <h3 className="text-lg font-heading font-semibold mb-6">Top Skills to Learn</h3>
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-lg font-heading font-semibold">Top Skills Gap</h3>
+                <Link to="#" className="text-sm font-medium text-primary hover:underline">View</Link>
+              </div>
               <div className="space-y-5">
                 <div>
                   <div className="flex justify-between text-sm mb-2">
-                    <span className="text-text-primary">GraphQL</span>
-                    <span className="font-mono text-danger">High Impact</span>
+                    <span className="text-text-primary">System Design</span>
+                    <span className="font-mono text-text-muted">Need +15%</span>
                   </div>
-                  <div className="w-full h-2 bg-border rounded-full overflow-hidden">
-                    <div className="h-full bg-danger rounded-full w-[85%] shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
+                  <div className="w-full h-2 bg-[#36343a] rounded-full overflow-hidden">
+                    <div className="h-full bg-primary/80 rounded-full w-[45%]"></div>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-2">
-                    <span className="text-text-primary">Docker / CI/CD</span>
-                    <span className="font-mono text-[#F59E0B]">Medium Impact</span>
+                    <span className="text-text-primary">React Performance</span>
+                    <span className="font-mono text-text-muted">Need +5%</span>
                   </div>
-                  <div className="w-full h-2 bg-border rounded-full overflow-hidden">
-                    <div className="h-full bg-[#F59E0B] rounded-full w-[65%] shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
+                  <div className="w-full h-2 bg-[#36343a] rounded-full overflow-hidden">
+                    <div className="h-full bg-primary/60 rounded-full w-[70%]"></div>
                   </div>
                 </div>
               </div>

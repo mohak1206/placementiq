@@ -7,7 +7,7 @@ const MockInterview = () => {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <Sidebar activePage="Mock Interview" />
+      <Sidebar activePage="interview" />
       
       <main className="flex-1 md:ml-64 flex flex-col h-screen overflow-hidden">
         {/* Header */}
@@ -97,14 +97,14 @@ const MockInterview = () => {
                 {!isRecording ? (
                    <button 
                     onClick={() => setIsRecording(true)}
-                    className="w-12 h-12 rounded-full bg-success hover:bg-success/90 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all transform hover:scale-105"
+                    className="w-14 h-14 rounded-full bg-success hover:bg-success/90 flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all transform hover:scale-105"
                   >
-                    <span className="material-symbols-outlined text-white icon-filled">mic</span>
+                    <span className="material-symbols-outlined text-white icon-filled text-[28px]">mic</span>
                   </button>
                 ) : (
                   <button 
                     onClick={() => setIsRecording(false)}
-                    className="w-12 h-12 rounded-full border-2 border-border hover:border-danger/50 text-text-primary hover:text-danger flex items-center justify-center transition-all bg-background/50"
+                    className="w-14 h-14 rounded-full border-2 border-border hover:border-danger/50 text-text-primary hover:text-danger flex items-center justify-center transition-all bg-background/50"
                   >
                     <span className="material-symbols-outlined">stop</span>
                   </button>

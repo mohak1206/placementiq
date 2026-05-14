@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = ({ activePage }) => {
   const navLinks = [
-    { name: 'Dashboard', path: '/dashboard', icon: 'dashboard' },
-    { name: 'Resume Analyzer', path: '/analyzer', icon: 'document_scanner' },
-    { name: 'Mock Interview', path: '/interview', icon: 'interpreter_mode' },
-    { name: 'Progress', path: '#', icon: 'trending_up' },
-    { name: 'Settings', path: '#', icon: 'settings' },
+    { name: 'Dashboard', path: '/dashboard', icon: 'dashboard', id: 'dashboard' },
+    { name: 'Resume Analyzer', path: '/analyzer', icon: 'analytics', id: 'analyzer' },
+    { name: 'Mock Interview', path: '/interview', icon: 'interpreter_mode', id: 'interview' },
+    { name: 'Progress', path: '#', icon: 'monitoring', id: 'progress' },
+    { name: 'Settings', path: '#', icon: 'settings', id: 'settings' },
   ];
 
   return (
@@ -32,15 +32,15 @@ const Sidebar = ({ activePage }) => {
       {/* Nav Links */}
       <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
         {navLinks.map((link) => {
-          const isActive = activePage === link.name;
+          const isActive = activePage === link.id;
           return (
             <Link
-              key={link.name}
+              key={link.id}
               to={link.path}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                 isActive 
-                  ? 'bg-primary/10 text-primary border-r-2 border-primary rounded-r-none' 
-                  : 'text-text-secondary hover:bg-white/5 hover:text-text-primary'
+                  ? 'bg-primary/10 text-primary border-r-2 border-primary rounded-r-none scale-[0.98]' 
+                  : 'text-text-secondary hover:bg-white/5 hover:text-text-primary hover:scale-[0.98]'
               }`}
             >
               <span className={`material-symbols-outlined text-[22px] ${isActive ? 'icon-filled' : ''}`}>

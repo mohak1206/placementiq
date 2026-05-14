@@ -64,7 +64,7 @@ const ResumeAnalyzer = () => {
 
   return (
     <div className="min-h-screen bg-background flex">
-      <Sidebar activePage="Resume Analyzer" />
+      <Sidebar activePage="analyzer" />
       
       <main className="flex-1 md:ml-64 flex flex-col h-screen overflow-hidden">
         {/* Header */}
